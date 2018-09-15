@@ -23,12 +23,14 @@ context("Tic-Tac-Toe Tests", () => {
         cy.get(".Game-square").eq(5).should("be.empty");
         cy.get(".Game-square").eq(5).click();
         cy.get(".Game-square").eq(5).contains("X");
+        cy.wait(1000);
     });
 
     it("Should place an O sign when a square is clicked next", () => {
         cy.get(".Game-square").eq(7).should("be.empty");
         cy.get(".Game-square").eq(7).click();
         cy.get(".Game-square").eq(7).contains("O");
+        cy.wait(1000);
     });
 
 });
