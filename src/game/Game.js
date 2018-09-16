@@ -36,7 +36,6 @@ class Board extends Component {
     onSquareClick(index) {
         let state = _.cloneDeep(this.state);
         state.squares[index[0]][index[1]] = this.state.turn;
-        state.turn++;
         this.setState(state);
     }
 
