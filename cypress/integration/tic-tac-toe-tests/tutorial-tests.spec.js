@@ -1,6 +1,6 @@
 context("Tic-Tac-Toe Tests", () => {
 
-    it("Go to All", () => {
+    it("Open App", () => {
         cy.visit("http://localhost:3000")
     });
 
@@ -26,7 +26,7 @@ context("Tic-Tac-Toe Tests", () => {
         cy.wait(1000);
     });
 
-    it("Should place an O sign when a square is clicked next", () => {
+    it("Should place an O sign when another square is clicked next", () => {
         cy.get(".Game-square").eq(7).should("be.empty");
         cy.get(".Game-square").eq(7).click();
         cy.get(".Game-square").eq(7).contains("O");
